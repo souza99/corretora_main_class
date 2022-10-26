@@ -22,6 +22,15 @@ class Body extends StatelessWidget {
                     bottomRight: Radius.circular(36),
                   ),
                 ),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Hi User',
+                      style: Theme.of(context).textTheme.headline5?.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
               Positioned(
                 bottom: 0,
