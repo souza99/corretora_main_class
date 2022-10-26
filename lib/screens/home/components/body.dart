@@ -1,5 +1,6 @@
 import 'package:corretora_main_class/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -27,6 +28,7 @@ class Body extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: Container(
+                  alignment: Alignment.center,
                   margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                   padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                   height: 54,
@@ -41,15 +43,25 @@ class Body extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(
-                        color: kPrimaryColor.withOpacity(0.5),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: TextField(
+                          onChanged: (value) {},
+                          decoration: InputDecoration(
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                              color: kPrimaryColor.withOpacity(0.5),
+                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            // suffixIcon: SvgPicture.asset(
+                            //     "assets/icons/search-svgrepo-com.svg"),
+                          ),
+                        ),
                       ),
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                    ),
+                      SvgPicture.asset("assets/icons/search-svgrepo-com.svg"),
+                    ],
                   ),
                 ),
               ),
